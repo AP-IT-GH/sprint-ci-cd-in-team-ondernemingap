@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
          v =     findViewById(R.id.TomCruise);
 
-
+// ik moet comitten
         if(show == true){
             v.setVisibility(View.VISIBLE);
             show = false;
