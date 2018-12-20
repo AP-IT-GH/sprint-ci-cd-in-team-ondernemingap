@@ -29,6 +29,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -93,6 +98,29 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
+
+    boolean show = true;
+
+
+
+    public void ShowHide(View view) {
+
+        View v =     findViewById(R.id.TomCruise);
+
+
+        if(show == true){
+            v.setVisibility(View.VISIBLE);
+            show = false;
+        }
+        else{
+            v.setVisibility(View.INVISIBLE);
+            show=true;
+        }
+
+
+    }
+
+
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
