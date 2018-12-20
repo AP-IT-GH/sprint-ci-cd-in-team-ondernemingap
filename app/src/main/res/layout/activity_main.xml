@@ -90,4 +90,12 @@
         android:layout_height="104dp"
         android:visibility="invisible"
         app:srcCompat="@drawable/tomcruise" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Amir"
+
+        android:onClick="Color"/>
 </LinearLayout>

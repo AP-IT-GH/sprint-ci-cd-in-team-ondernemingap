@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -102,10 +103,10 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     boolean show = true;
 
 
-
+    View v;
     public void ShowHide(View view) {
 
-        View v =     findViewById(R.id.TomCruise);
+         v =     findViewById(R.id.TomCruise);
 
 
         if(show == true){
@@ -119,6 +120,26 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
 
     }
+
+    boolean show2 = true;
+    public  void Color(View view){
+        v = this.getWindow().getDecorView();
+
+
+        if(show2 == true){
+            v.setBackgroundColor(Color.BLUE);
+
+            show2 = false;
+        }
+        else{
+            v.setBackgroundColor(Color.WHITE);
+            show2=true;
+        }
+
+
+    }
+
+
 
 
 
